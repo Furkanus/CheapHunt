@@ -16,6 +16,7 @@
 		70772A54266549C800E6D440 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70772A53266549C800E6D440 /* AppError.swift */; };
 		70772A5726654A2800E6D440 /* ErrorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70772A5626654A2800E6D440 /* ErrorExt.swift */; };
 		70946E152667617200B13102 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70946E142667617200B13102 /* FavoritesView.swift */; };
+		70B92020266A1D550046BD6E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B9201F266A1D550046BD6E /* SettingsView.swift */; };
 		70FFCD8C26640A3E00F85137 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FFCD8B26640A3E00F85137 /* CustomTextField.swift */; };
 		70FFCD8F26640B8800F85137 /* UserName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FFCD8E26640B8800F85137 /* UserName.swift */; };
 		70FFCD9126640EBD00F85137 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FFCD9026640EBD00F85137 /* CustomButton.swift */; };
@@ -38,6 +39,7 @@
 		70772A53266549C800E6D440 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		70772A5626654A2800E6D440 /* ErrorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExt.swift; sourceTree = "<group>"; };
 		70946E142667617200B13102 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		70B9201F266A1D550046BD6E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		70FFCD8B26640A3E00F85137 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		70FFCD8E26640B8800F85137 /* UserName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserName.swift; sourceTree = "<group>"; };
 		70FFCD9026640EBD00F85137 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				706F0B162662D0F00071C63A /* ContentView.swift */,
 				70FFCD922664117600F85137 /* MainView.swift */,
 				70946E142667617200B13102 /* FavoritesView.swift */,
+				70B9201F266A1D550046BD6E /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				70772A54266549C800E6D440 /* AppError.swift in Sources */,
 				70FFCD9126640EBD00F85137 /* CustomButton.swift in Sources */,
 				700387E42663BF25001E810B /* ColorExt.swift in Sources */,
+				70B92020266A1D550046BD6E /* SettingsView.swift in Sources */,
 				70FFCD952664119400F85137 /* UserLoggedIn.swift in Sources */,
 				70FFE50426650E1D0051767F /* Deal.swift in Sources */,
 				70FFCD8F26640B8800F85137 /* UserName.swift in Sources */,
