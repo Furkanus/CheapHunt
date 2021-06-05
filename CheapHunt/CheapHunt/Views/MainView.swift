@@ -14,6 +14,7 @@ struct MainView: View {
     private let second : Double = 4.0
     @State private var isString = ""
     @State private var isActive : Bool = false
+    @State private var settingsActive : Bool = false
     @ObservedObject private var getData = GetData()
     
     init() {
@@ -69,22 +70,25 @@ struct MainView: View {
                                 }
                                 
                                 HStack {
-                                    Text("Saled Price \(data.salePrice!)")
-                                        .font(.system(size: 15))
-                                        .fontWeight(.light)
-                                    
-                                    Text("Normal Price \(data.normalPrice!)")
-                                        .font(.system(size: 10))
-                                        .fontWeight(.medium)
-                                        .foregroundColor(.red)
-                                    
-                                    Spacer()
-                                    
-                                    
-                                    Text("Rating \(data.dealRating!)⭐️")
-                                        .font(.system(size: 10))
-                                        .fontWeight(.medium)
-                                        .foregroundColor(.green)
+                                    NavigationLink(destination: GameDetailView(games: data)) {
+                                        Text("Saled Price \(data.salePrice!)")
+                                            .font(.system(size: 15))
+                                            .fontWeight(.light)
+                                        
+                                        Text("Normal Price \(data.normalPrice!)")
+                                            .font(.system(size: 10))
+                                            .fontWeight(.medium)
+                                            .foregroundColor(.red)
+                                        
+                                        Spacer()
+                                        
+                                        
+                                        Text("Rating \(data.dealRating!)⭐️")
+                                            .font(.system(size: 10))
+                                            .fontWeight(.medium)
+                                            .foregroundColor(.green)
+                                    }
+                                  
                                 }
                                 
                             }
@@ -132,6 +136,7 @@ struct MainView: View {
                     }) {
                         Image(systemName: "heart.circle.fill")
                             .font(.system(size: 30))
+                            .foregroundColor(Color.heart)
                     } .background(
                         NavigationLink(
                             destination: FavoritesView(), isActive : $isActive) {
@@ -139,6 +144,29 @@ struct MainView: View {
                         }
                         .hidden()
                     )
+                }
+                
+                ToolbarItemGroup(placement: .navigationBarLeading) {
+                 
+                    
+                    Button(action: {
+                        print("settings tapped")
+                        self.isActive = true
+                    }) {
+                        Image(systemName: "gear")
+                            .font(.system(size: 30))
+                            .foregroundColor(Color.gear)
+                    }.background(
+                        NavigationLink(destination: SettingsView(), isActive: $settingsActive) {
+                            SettingsView()
+                        }
+                        
+                        .hidden()
+                    
+                    )
+                    
+                    
+
                 }
             }
         }
