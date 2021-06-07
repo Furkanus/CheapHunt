@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		700387E42663BF25001E810B /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700387E32663BF25001E810B /* ColorExt.swift */; };
+		70039FE2266D489700268D0D /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70039FE1266D489700268D0D /* DataServiceProtocol.swift */; };
 		7021261D266B85A600E7A4C2 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7021261C266B85A600E7A4C2 /* GameDetailView.swift */; };
 		70212620266B892100E7A4C2 /* ImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7021261F266B892100E7A4C2 /* ImageURL.swift */; };
 		706F0B152662D0F00071C63A /* CheapHuntApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706F0B142662D0F00071C63A /* CheapHuntApp.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		700387E32663BF25001E810B /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
+		70039FE1266D489700268D0D /* DataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceProtocol.swift; sourceTree = "<group>"; };
 		7021261C266B85A600E7A4C2 /* GameDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailView.swift; sourceTree = "<group>"; };
 		7021261F266B892100E7A4C2 /* ImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURL.swift; sourceTree = "<group>"; };
 		706F0B112662D0F00071C63A /* CheapHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheapHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,14 @@
 			path = ColorExtension;
 			sourceTree = "<group>";
 		};
+		70039FE0266D488200268D0D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				70039FE1266D489700268D0D /* DataServiceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		7021261E266B891300E7A4C2 /* ImageService */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				706F0B232662D1390071C63A /* Application */,
+				70039FE0266D488200268D0D /* Protocols */,
 				70FFE50226650DFE0051767F /* Network */,
 				70FFCD962664127300F85137 /* ViewModifiers */,
 				70FFCD8D26640B7A00F85137 /* UserStore */,
@@ -305,6 +316,7 @@
 				706F0B172662D0F00071C63A /* ContentView.swift in Sources */,
 				70772A5726654A2800E6D440 /* ErrorExt.swift in Sources */,
 				70946E152667617200B13102 /* FavoritesView.swift in Sources */,
+				70039FE2266D489700268D0D /* DataServiceProtocol.swift in Sources */,
 				70772A54266549C800E6D440 /* AppError.swift in Sources */,
 				7021261D266B85A600E7A4C2 /* GameDetailView.swift in Sources */,
 				70FFCD9126640EBD00F85137 /* CustomButton.swift in Sources */,

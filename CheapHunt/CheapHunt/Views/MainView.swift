@@ -15,6 +15,7 @@ struct MainView: View {
     @State private var isString = ""
     @State private var isActive : Bool = false
     @State private var settingsActive : Bool = false
+    @State private var emptyAlert : Bool = false
     @ObservedObject private var getData = GetData()
     
     init() {
@@ -34,16 +35,26 @@ struct MainView: View {
                     
                     TextField("Enter your amount here!", text: $isString)
                         .textFieldStyle(OvalTextField())
-                    Button {
-
-                        getData.getData(price: Int(isString)!) { data in
-                            self.dat = data
+                    Button("Fetch") {
+                        
+                        switch self.isString.isEmpty {
+                        case .BooleanLiteralType(true):
+                            self.emptyAlert = true
+                            
+                        default:
+                            getData.getData(price: Int((isString))) { data in
+                                self.dat = data
+                            }
                         }
-                    } label: {
-                        Text("Fetch")
-                    }.buttonStyle(OvalButton())
+                
+                       
+                    } .alert(isPresented: $emptyAlert , content: {
+                        Alert(title: Text("Your amount Cannot be empty or under 1 dollars!"), message: Text("Enter again"), dismissButton: .default(Text("OK!")))
+                    })
                     
-                   
+                    .buttonStyle(OvalButton())
+                    
+                    
                     
                     Text("Welcome \(userName.name) write your amount for matched games!")
                         .font(.system(size: 15))
@@ -151,7 +162,7 @@ struct MainView: View {
                     
                     Button(action: {
                         print("settings tapped")
-                        self.isActive = true
+                        self.settingsActive = true
                     }) {
                         Image(systemName: "gear")
                             .font(.system(size: 30))
