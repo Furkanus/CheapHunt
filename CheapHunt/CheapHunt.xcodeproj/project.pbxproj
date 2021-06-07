@@ -25,7 +25,6 @@
 		70FFCD9126640EBD00F85137 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FFCD9026640EBD00F85137 /* CustomButton.swift */; };
 		70FFCD932664117600F85137 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FFCD922664117600F85137 /* MainView.swift */; };
 		70FFCD952664119400F85137 /* UserLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FFCD942664119400F85137 /* UserLoggedIn.swift */; };
-		70FFCD982664128400F85137 /* DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FFCD972664128400F85137 /* DismissKeyboard.swift */; };
 		70FFE50426650E1D0051767F /* Deal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FFE50326650E1D0051767F /* Deal.swift */; };
 		70FFE508266510890051767F /* GetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FFE507266510890051767F /* GetData.swift */; };
 /* End PBXBuildFile section */
@@ -45,13 +44,13 @@
 		70772A53266549C800E6D440 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		70772A5626654A2800E6D440 /* ErrorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExt.swift; sourceTree = "<group>"; };
 		70946E142667617200B13102 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		70AE2A1D266E2AE10075AFC2 /* CheapHunt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CheapHunt.entitlements; sourceTree = "<group>"; };
 		70B9201F266A1D550046BD6E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		70FFCD8B26640A3E00F85137 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		70FFCD8E26640B8800F85137 /* UserName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserName.swift; sourceTree = "<group>"; };
 		70FFCD9026640EBD00F85137 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		70FFCD922664117600F85137 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		70FFCD942664119400F85137 /* UserLoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoggedIn.swift; sourceTree = "<group>"; };
-		70FFCD972664128400F85137 /* DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboard.swift; sourceTree = "<group>"; };
 		70FFE50326650E1D0051767F /* Deal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deal.swift; sourceTree = "<group>"; };
 		70FFE507266510890051767F /* GetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,10 +120,10 @@
 		706F0B132662D0F00071C63A /* CheapHunt */ = {
 			isa = PBXGroup;
 			children = (
+				70AE2A1D266E2AE10075AFC2 /* CheapHunt.entitlements */,
 				706F0B232662D1390071C63A /* Application */,
 				70039FE0266D488200268D0D /* Protocols */,
 				70FFE50226650DFE0051767F /* Network */,
-				70FFCD962664127300F85137 /* ViewModifiers */,
 				70FFCD8D26640B7A00F85137 /* UserStore */,
 				70FFCD8A266409C200F85137 /* CustomElements */,
 				700387E12663BEE6001E810B /* Extensions */,
@@ -204,14 +203,6 @@
 				70FFCD942664119400F85137 /* UserLoggedIn.swift */,
 			);
 			path = UserStore;
-			sourceTree = "<group>";
-		};
-		70FFCD962664127300F85137 /* ViewModifiers */ = {
-			isa = PBXGroup;
-			children = (
-				70FFCD972664128400F85137 /* DismissKeyboard.swift */,
-			);
-			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 		70FFE50226650DFE0051767F /* Network */ = {
@@ -311,7 +302,6 @@
 			files = (
 				70FFCD8C26640A3E00F85137 /* CustomTextField.swift in Sources */,
 				70FFCD932664117600F85137 /* MainView.swift in Sources */,
-				70FFCD982664128400F85137 /* DismissKeyboard.swift in Sources */,
 				70212620266B892100E7A4C2 /* ImageURL.swift in Sources */,
 				706F0B172662D0F00071C63A /* ContentView.swift in Sources */,
 				70772A5726654A2800E6D440 /* ErrorExt.swift in Sources */,
@@ -455,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CheapHunt/CheapHunt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CheapHunt/Preview Content\"";
 				DEVELOPMENT_TEAM = C7UJQJ2BAR;
@@ -467,6 +458,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.furkanhanci.CheapHunt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -477,6 +469,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CheapHunt/CheapHunt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CheapHunt/Preview Content\"";
 				DEVELOPMENT_TEAM = C7UJQJ2BAR;
@@ -489,6 +482,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.furkanhanci.CheapHunt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

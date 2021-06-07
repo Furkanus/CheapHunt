@@ -15,22 +15,29 @@ struct SettingsView: View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color.bg3 , Color.bg1]), startPoint: .bottomTrailing, endPoint: .topLeading).edgesIgnoringSafeArea(.all)
             ZStack {
-                VStack {
+                VStack {
                     Button("Send me a daily notification") {
                         self.sendNotification()
                     }
                     .buttonStyle(OvalButton())
-                   
+                    
                     
                     Button("Notification Permission") {
                         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
-                            if success {
-                                print("All set!")
-                            } else if let error = error {
-                                print(error.localizedDescription)
+                            
+                            
+                            switch success {
+                            case success:
+                                print("All set")
+                                
+                            case (error != nil):
+                                print(error?.localizedDescription as Any)
+                                
+                            default:
+                                break
                             }
                         }
-                    }
+                    }.buttonStyle(OvalButton())
                 }
             }
         }
@@ -43,15 +50,19 @@ struct SettingsView: View {
         
         let content = UNMutableNotificationContent()
         content.title = "Welcome \(userName.name)!"
-        content.body = "Thank you for interesting"
+        content.body = "Thank you for interesting CheapHunt"
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        
+        // if you want hourly notification do it like this
+        //         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         
         let request = UNNotificationRequest(identifier: "req", content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
-    
+     
     
 }
 

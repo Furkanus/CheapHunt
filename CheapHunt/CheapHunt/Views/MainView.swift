@@ -33,7 +33,7 @@ struct MainView: View {
                 
                 VStack {
                     
-                    TextField("Enter your amount here!", text: $isString)
+                    TextField("Enter Your Amount Here!", text: $isString)
                         .textFieldStyle(OvalTextField())
                     Button("Fetch") {
                         
@@ -46,8 +46,8 @@ struct MainView: View {
                                 self.dat = data
                             }
                         }
-                
-                       
+                        
+                        
                     } .alert(isPresented: $emptyAlert , content: {
                         Alert(title: Text("Your amount Cannot be empty or under 1 dollars!"), message: Text("Enter again"), dismissButton: .default(Text("OK!")))
                     })
@@ -56,7 +56,7 @@ struct MainView: View {
                     
                     
                     
-                    Text("Welcome \(userName.name) write your amount for matched games!")
+                    Text("Welcome \(userName.name), enter your amount for matched games!")
                         .font(.system(size: 15))
                         .fontWeight(.semibold)
                     
@@ -99,7 +99,7 @@ struct MainView: View {
                                             .fontWeight(.medium)
                                             .foregroundColor(.green)
                                     }
-                                  
+                                    
                                 }
                                 
                             }
@@ -158,7 +158,7 @@ struct MainView: View {
                 }
                 
                 ToolbarItemGroup(placement: .navigationBarLeading) {
-                 
+                    
                     
                     Button(action: {
                         print("settings tapped")
@@ -173,17 +173,19 @@ struct MainView: View {
                         }
                         
                         .hidden()
-                    
+                        
                     )
                     
                     
-
+                    
                 }
             }
         }
         .navigationBarBackButtonHidden(true)
     }
 }
+
+
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {

@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct CheapHuntApp: App {
-    @ObservedObject private var logged = FirstLaunch()
+    @StateObject private var logged = FirstLaunch()
     var body: some Scene {
         WindowGroup {
             if self.logged.launch == 0 {
@@ -18,8 +18,6 @@ struct CheapHuntApp: App {
             } else {
                 MainView()
             }
-        
-        
             
         }
     }

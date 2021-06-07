@@ -17,6 +17,7 @@ class GetData : ObservableObject  , DataService {
             return }
         
         
+        
         URLSession.shared.dataTask(with: url) { data, response, error in
             
             let datas = try! JSONDecoder().decode([Deal].self, from: data!)
@@ -25,7 +26,9 @@ class GetData : ObservableObject  , DataService {
                 completion(datas)
                 print("Loaded!")
             }
+            sleep(10)
         }
+        
         .resume()
     }
     
