@@ -9,11 +9,11 @@
 import SwiftUI
 
 class GetData : ObservableObject  , DataService {
-    @Published var deals : [Deal] = []
-    
+    @Published private var deals : [Deal] = []
+    private var second : Int = 0
     func getData(price: Int?,completion: @escaping ([Deal]) -> Void) {
         guard let url = URL(string: "https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=\(price ?? 20)")  else {
-            AppError.custom(description: "ERROR")
+            AppError.custom(description: "Error when get data from api")
             return }
         
         
@@ -23,13 +23,24 @@ class GetData : ObservableObject  , DataService {
             let datas = try! JSONDecoder().decode([Deal].self, from: data!)
             //print(datas)
             DispatchQueue.main.async {
-                completion(datas)
-                print("Loaded!")
+                
+                var  timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { tim in
+                    self.second += 1
+                    
+                    if self.second == 5 {
+                        tim.invalidate()
+                        print("done")
+                    }
+                    
+                    completion(datas)
+                    print("Loaded!")
+                }
+                
+               
             }
-            sleep(10)
-        }
+            
+        }.resume()
         
-        .resume()
     }
     
 }
