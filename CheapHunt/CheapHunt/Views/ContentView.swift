@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject private var userName = UserName()
+    @ObservedObject private var monitor = NetworkError()
     @ObservedObject private var userLogged = FirstLaunch()
+    @State private var alert : Bool = false
    @State private var isActive : Bool = false
     @State private var linkActive : Bool = false
     var body: some View {
@@ -62,6 +64,9 @@ struct ContentView: View {
                         .alert(isPresented: $isActive , content: {
                             Alert(title: Text("Your Name Cannot be empty!"), message: Text("Write your name"), dismissButton: .default(Text("OK!")))
                         })
+                    
+                  
+                    
                         
                         
                         .buttonStyle(OvalButton())
@@ -69,7 +74,17 @@ struct ContentView: View {
                         Spacer()
                     }.frame(width: UIScreen.main.bounds.size.width / 1.5)
                 }
-            }
+            }.onAppear {
+                switch self.monitor.isConnected {
+                case .BooleanLiteralType(false):
+                    self.alert = true
+                    
+                default:
+                    break;
+                }
+            }  .alert(isPresented: $alert , content: {
+               return Alert(title: Text("Please check your internet connection!"), message: Text("Connection failed"), dismissButton: .default(Text("OK")))
+            })
             
         }
         

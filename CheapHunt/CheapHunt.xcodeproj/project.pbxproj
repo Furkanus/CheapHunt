@@ -11,6 +11,7 @@
 		70039FE2266D489700268D0D /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70039FE1266D489700268D0D /* DataServiceProtocol.swift */; };
 		7021261D266B85A600E7A4C2 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7021261C266B85A600E7A4C2 /* GameDetailView.swift */; };
 		70212620266B892100E7A4C2 /* ImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7021261F266B892100E7A4C2 /* ImageURL.swift */; };
+		70340A5B267B790000E56DC0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70340A5A267B790000E56DC0 /* NetworkError.swift */; };
 		706F0B152662D0F00071C63A /* CheapHuntApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706F0B142662D0F00071C63A /* CheapHuntApp.swift */; };
 		706F0B172662D0F00071C63A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706F0B162662D0F00071C63A /* ContentView.swift */; };
 		706F0B192662D0F10071C63A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706F0B182662D0F10071C63A /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		70039FE1266D489700268D0D /* DataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceProtocol.swift; sourceTree = "<group>"; };
 		7021261C266B85A600E7A4C2 /* GameDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailView.swift; sourceTree = "<group>"; };
 		7021261F266B892100E7A4C2 /* ImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURL.swift; sourceTree = "<group>"; };
+		70340A5A267B790000E56DC0 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		706F0B112662D0F00071C63A /* CheapHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheapHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		706F0B142662D0F00071C63A /* CheapHuntApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheapHuntApp.swift; sourceTree = "<group>"; };
 		706F0B162662D0F00071C63A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				70772A53266549C800E6D440 /* AppError.swift */,
+				70340A5A267B790000E56DC0 /* NetworkError.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				70FFE508266510890051767F /* GetData.swift in Sources */,
 				706F0B152662D0F00071C63A /* CheapHuntApp.swift in Sources */,
 				70772A51266547A900E6D440 /* MainViewModel.swift in Sources */,
+				70340A5B267B790000E56DC0 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
