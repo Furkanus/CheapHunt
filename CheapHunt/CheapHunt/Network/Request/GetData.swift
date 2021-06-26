@@ -11,7 +11,7 @@ import SwiftUI
 class GetData : ObservableObject  , DataService {
     @Published private var deals : [Deal] = []
     private var second : Int = 0
-    func getData(price: Int?,completion: @escaping ([Deal]) -> Void) {
+    internal func getData(price: Int?,completion: @escaping ([Deal]) -> Void) {
         guard let url = URL(string: "https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=\(price ?? 20)")  else {
             print(AppError.custom(description: "Error when get data from api"))
             return }

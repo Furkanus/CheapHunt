@@ -16,7 +16,7 @@ struct MainView: View {
     @State private var isActive : Bool = false
     @State private var settingsActive : Bool = false
     @State private var emptyAlert : Bool = false
-    @ObservedObject private var getData = GetData()
+    @StateObject private var getData = GetData()
     
     init() {
         UITableView.appearance().backgroundColor = .clear
@@ -35,6 +35,7 @@ struct MainView: View {
                     
                     TextField("Enter Your Amount Here!", text: $isString)
                         .textFieldStyle(OvalTextField())
+                        
                     Button("Fetch") {
                         
                         switch self.isString.isEmpty {
@@ -95,8 +96,8 @@ struct MainView: View {
                                         
                                         
                                         Text("Rating \(data.dealRating!)⭐️")
-                                            .font(.system(size: 10))
-                                            .fontWeight(.medium)
+                                            .font(.system(size: 15))
+                                            .fontWeight(.regular)
                                             .foregroundColor(.green)
                                     }
                                     
@@ -112,12 +113,14 @@ struct MainView: View {
                         ProgressView()
                             .progressViewStyle(CircularProgressViewStyle())
                             .opacity(isWorking ? 1 : 0)
+                            .foregroundColor(.black)
                             .animation(.easeIn)
                         
                         
                         Text("Loading")
                             .font(.system(size: 25))
                             .fontWeight(.light)
+                            .foregroundColor(.black)
                             .opacity(isWorking ? 1 : 0)
                             .animation(.easeIn)
                         
