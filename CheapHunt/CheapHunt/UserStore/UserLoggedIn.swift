@@ -19,3 +19,5 @@ class FirstLaunch : ObservableObject {
         self.launch = UserDefaults.standard.object(forKey: "Launched") as? Int ?? 0
     }
 }
+
+// User Logged in has been saved 

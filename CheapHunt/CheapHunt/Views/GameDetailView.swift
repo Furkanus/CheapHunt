@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GameDetailView: View {
     internal let games : Deal!
+    @State private var addFavorites : Bool = false
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color.bg1 , Color.bg2 , Color.bg4 , Color.bg3]), startPoint: .bottomLeading, endPoint: .topTrailing)
@@ -27,13 +28,31 @@ struct GameDetailView: View {
 
                 }
                 
-               
                 
-                Image(systemName: "person").getData(url: URL(string : games.thumb!)!)
-                    .resizable()
-                    .scaledToFit()
-                    .clipShape(RoundedRectangle(cornerRadius: 20))
-                    .frame(width: UIScreen.main.bounds.size.width * 0.75 , height: UIScreen.main.bounds.size.height / 2)
+                    
+
+               
+                VStack {
+                    
+                   
+                    
+                    Image(systemName: "person").getData(url: URL(string : games.thumb!)!)
+                        .resizable()
+                        .scaledToFit()
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .frame(width: UIScreen.main.bounds.size.width * 0.75 , height: UIScreen.main.bounds.size.height / 2)
+                        .padding(.bottom , 50)
+                    
+                    
+                    Button(action: {
+                       print("save favorites")
+                    }) {
+                        Image(systemName: "heart.circle.fill")
+                            .font(.system(size: 50))
+                            .foregroundColor(Color.heart)
+                    }
+                }
+                 
             }
   
         }

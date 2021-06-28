@@ -79,6 +79,8 @@ struct MainView: View {
                                     
                                     
                                     Spacer()
+                                    
+                                   
                                 }
                                 
                                 HStack {

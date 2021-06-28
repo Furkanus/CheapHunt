@@ -11,13 +11,13 @@
 		70039FE2266D489700268D0D /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70039FE1266D489700268D0D /* DataServiceProtocol.swift */; };
 		7021261D266B85A600E7A4C2 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7021261C266B85A600E7A4C2 /* GameDetailView.swift */; };
 		70212620266B892100E7A4C2 /* ImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7021261F266B892100E7A4C2 /* ImageURL.swift */; };
+		7024CAF82689C9B800D02A3B /* CheapError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024CAF72689C9B800D02A3B /* CheapError.swift */; };
 		70340A5B267B790000E56DC0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70340A5A267B790000E56DC0 /* NetworkError.swift */; };
 		706F0B152662D0F00071C63A /* CheapHuntApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706F0B142662D0F00071C63A /* CheapHuntApp.swift */; };
 		706F0B172662D0F00071C63A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706F0B162662D0F00071C63A /* ContentView.swift */; };
 		706F0B192662D0F10071C63A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706F0B182662D0F10071C63A /* Assets.xcassets */; };
 		706F0B1C2662D0F10071C63A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706F0B1B2662D0F10071C63A /* Preview Assets.xcassets */; };
 		70772A51266547A900E6D440 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70772A50266547A900E6D440 /* MainViewModel.swift */; };
-		70772A54266549C800E6D440 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70772A53266549C800E6D440 /* AppError.swift */; };
 		70772A5726654A2800E6D440 /* ErrorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70772A5626654A2800E6D440 /* ErrorExt.swift */; };
 		70946E152667617200B13102 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70946E142667617200B13102 /* FavoritesView.swift */; };
 		70B92020266A1D550046BD6E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B9201F266A1D550046BD6E /* SettingsView.swift */; };
@@ -35,6 +35,7 @@
 		70039FE1266D489700268D0D /* DataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceProtocol.swift; sourceTree = "<group>"; };
 		7021261C266B85A600E7A4C2 /* GameDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailView.swift; sourceTree = "<group>"; };
 		7021261F266B892100E7A4C2 /* ImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURL.swift; sourceTree = "<group>"; };
+		7024CAF72689C9B800D02A3B /* CheapError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheapError.swift; sourceTree = "<group>"; };
 		70340A5A267B790000E56DC0 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		706F0B112662D0F00071C63A /* CheapHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheapHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		706F0B142662D0F00071C63A /* CheapHuntApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheapHuntApp.swift; sourceTree = "<group>"; };
@@ -43,7 +44,6 @@
 		706F0B1B2662D0F10071C63A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		706F0B1D2662D0F10071C63A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70772A50266547A900E6D440 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		70772A53266549C800E6D440 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		70772A5626654A2800E6D440 /* ErrorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExt.swift; sourceTree = "<group>"; };
 		70946E142667617200B13102 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		70AE2A1D266E2AE10075AFC2 /* CheapHunt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CheapHunt.entitlements; sourceTree = "<group>"; };
@@ -176,8 +176,8 @@
 		70772A52266549B000E6D440 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				70772A53266549C800E6D440 /* AppError.swift */,
 				70340A5A267B790000E56DC0 /* NetworkError.swift */,
+				7024CAF72689C9B800D02A3B /* CheapError.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -310,7 +310,6 @@
 				70772A5726654A2800E6D440 /* ErrorExt.swift in Sources */,
 				70946E152667617200B13102 /* FavoritesView.swift in Sources */,
 				70039FE2266D489700268D0D /* DataServiceProtocol.swift in Sources */,
-				70772A54266549C800E6D440 /* AppError.swift in Sources */,
 				7021261D266B85A600E7A4C2 /* GameDetailView.swift in Sources */,
 				70FFCD9126640EBD00F85137 /* CustomButton.swift in Sources */,
 				700387E42663BF25001E810B /* ColorExt.swift in Sources */,
@@ -322,6 +321,7 @@
 				706F0B152662D0F00071C63A /* CheapHuntApp.swift in Sources */,
 				70772A51266547A900E6D440 /* MainViewModel.swift in Sources */,
 				70340A5B267B790000E56DC0 /* NetworkError.swift in Sources */,
+				7024CAF82689C9B800D02A3B /* CheapError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +455,7 @@
 				DEVELOPMENT_TEAM = C7UJQJ2BAR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CheapHunt/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -479,7 +479,7 @@
 				DEVELOPMENT_TEAM = C7UJQJ2BAR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CheapHunt/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
