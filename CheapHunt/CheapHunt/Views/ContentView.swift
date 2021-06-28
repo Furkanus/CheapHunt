@@ -21,12 +21,12 @@ struct ContentView: View {
                     .edgesIgnoringSafeArea(.all)
                 ZStack {
                     VStack {
-                        Text("Welcome")
+                        Text(Constants.Texts.welcome)
                             .font(.system(size: 50))
                             .fontWeight(.bold)
                             .foregroundColor(.black)
                         
-                        Text("CheapHunt")
+                        Text(Constants.Texts.appName)
                             .font(.system(size: 40))
                             .fontWeight(.light)
                             .foregroundColor(.black)
@@ -41,10 +41,10 @@ struct ContentView: View {
                     Spacer()
                     
                     
-                    TextField("Enter Your Name Here", text: $userName.name)
+                    TextField(Constants.Texts.enterName, text: $userName.name)
                         .textFieldStyle(OvalTextField())
                             
-                    Button("A new journey is begin!") {
+                    Button(Constants.Texts.newJourney) {
                         if self.userName.name.isEmpty {
                             self.isActive = true
                         } else {
@@ -62,7 +62,7 @@ struct ContentView: View {
                                 )
                         
                         .alert(isPresented: $isActive , content: {
-                            Alert(title: Text("Your Name Cannot be empty!"), message: Text("Write your name"), dismissButton: .default(Text("OK!")))
+                            Alert(title: Text(Constants.Error.cannotEmpty), message: Text(Constants.Error.enterYourName), dismissButton: .default(Text(Constants.Error.ok)))
                         })
                     
                   
@@ -83,7 +83,7 @@ struct ContentView: View {
                     break;
                 }
             }  .alert(isPresented: $alert , content: {
-               return Alert(title: Text("Please check your internet connection!"), message: Text("Connection failed"), dismissButton: .default(Text("OK")))
+                return Alert(title: Text(Constants.Error.checkConnection), message: Text(Constants.Error.oops), dismissButton: .default(Text(Constants.Error.ok)))
             })
             
         }

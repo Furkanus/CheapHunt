@@ -16,8 +16,23 @@ class GetData : ObservableObject  , DataService {
             return }
         
         
-        let session = URLSession.shared
+        let session = URLSession(configuration: .default)
         session.dataTask(with: url) { data, response, error in
+            
+            
+           let resp = response as! HTTPURLResponse
+            
+            switch resp.statusCode == 404 {
+            case .BooleanLiteralType(true):
+                print("error get data from api!")
+                
+            case .BooleanLiteralType(false):
+                print("passed from api")
+                
+            default:
+                break;
+            
+            }
             
             let datas = try! JSONDecoder().decode([Deal].self, from: data!)
             //print(datas)

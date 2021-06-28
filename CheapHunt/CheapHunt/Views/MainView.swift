@@ -33,10 +33,10 @@ struct MainView: View {
                 
                 VStack {
                     
-                    TextField("Enter Your Amount Here!", text: $isString)
+                    TextField(Constants.Texts.enterAmount, text: $isString)
                         .textFieldStyle(OvalTextField())
                         
-                    Button("Fetch") {
+                    Button(Constants.Texts.fetch) {
                         
                         switch self.isString.isEmpty {
                         case .BooleanLiteralType(true):
@@ -50,7 +50,7 @@ struct MainView: View {
                         
                         
                     } .alert(isPresented: $emptyAlert , content: {
-                        Alert(title: Text("Your amount Cannot be empty or under 1 dollars!"), message: Text("Enter again"), dismissButton: .default(Text("OK!")))
+                        Alert(title: Text(Constants.Texts.underDollar), message: Text(Constants.Texts.again), dismissButton: .default(Text(Constants.Error.ok)))
                     })
                     
                     .buttonStyle(OvalButton())
@@ -119,7 +119,7 @@ struct MainView: View {
                             .animation(.easeIn)
                         
                         
-                        Text("Loading")
+                        Text(Constants.Texts.loading)
                             .font(.system(size: 25))
                             .fontWeight(.light)
                             .foregroundColor(.black)
@@ -150,7 +150,7 @@ struct MainView: View {
                         print("Favorites tapped")
                         self.isActive = true
                     }) {
-                        Image(systemName: "heart.circle.fill")
+                        Image(systemName: Constants.Style.Image.heart)
                             .font(.system(size: 30))
                             .foregroundColor(Color.heart)
                     } .background(
@@ -169,7 +169,7 @@ struct MainView: View {
                         print("settings tapped")
                         self.settingsActive = true
                     }) {
-                        Image(systemName: "gear")
+                        Image(systemName: Constants.Style.Image.gear)
                             .font(.system(size: 30))
                             .foregroundColor(Color.gear)
                     }.background(
