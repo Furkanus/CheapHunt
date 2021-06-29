@@ -7,7 +7,7 @@
 
 import SwiftUI
 import CoreData
-class GetData : ObservableObject  , DataService , CoreDataService {
+class GetData : ObservableObject  , DataService {
    
     @Published private var deals : [Deal] = []
     
