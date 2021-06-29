@@ -20,6 +20,7 @@
 		706F0B192662D0F10071C63A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706F0B182662D0F10071C63A /* Assets.xcassets */; };
 		706F0B1C2662D0F10071C63A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706F0B1B2662D0F10071C63A /* Preview Assets.xcassets */; };
 		70772A51266547A900E6D440 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70772A50266547A900E6D440 /* MainViewModel.swift */; };
+		70829E44268B37780065487E /* CoreDataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70829E43268B37780065487E /* CoreDataServiceProtocol.swift */; };
 		70946E152667617200B13102 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70946E142667617200B13102 /* FavoritesView.swift */; };
 		70B92020266A1D550046BD6E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B9201F266A1D550046BD6E /* SettingsView.swift */; };
 		70FFCD8C26640A3E00F85137 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FFCD8B26640A3E00F85137 /* CustomTextField.swift */; };
@@ -47,6 +48,7 @@
 		706F0B1B2662D0F10071C63A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		706F0B1D2662D0F10071C63A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70772A50266547A900E6D440 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		70829E43268B37780065487E /* CoreDataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataServiceProtocol.swift; sourceTree = "<group>"; };
 		70946E142667617200B13102 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		70AE2A1D266E2AE10075AFC2 /* CheapHunt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CheapHunt.entitlements; sourceTree = "<group>"; };
 		70B9201F266A1D550046BD6E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				70039FE1266D489700268D0D /* DataServiceProtocol.swift */,
+				70829E43268B37780065487E /* CoreDataServiceProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				7024CB1D2689E00300D02A3B /* Constants.swift in Sources */,
 				70B92020266A1D550046BD6E /* SettingsView.swift in Sources */,
 				70FFCD952664119400F85137 /* UserLoggedIn.swift in Sources */,
+				70829E44268B37780065487E /* CoreDataServiceProtocol.swift in Sources */,
 				70FFE50426650E1D0051767F /* Deal.swift in Sources */,
 				70FFCD8F26640B8800F85137 /* UserName.swift in Sources */,
 				70FFE508266510890051767F /* GetData.swift in Sources */,

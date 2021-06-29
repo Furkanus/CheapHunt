@@ -106,7 +106,8 @@ struct MainView: View {
                                 }
                                 
                             }
-                        }.cornerRadius(15)
+                        }
+                        .cornerRadius(15)
                     }
                     .padding(.top , 60)
                     .frame(height: UIScreen.main.bounds.width / 1.2)

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GameDetailView: View {
+struct GameDetailView: View  {
     internal let games : Deal!
     @State private var addFavorites : Bool = false
     var body: some View {

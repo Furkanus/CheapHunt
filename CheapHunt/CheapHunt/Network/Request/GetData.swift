@@ -5,11 +5,23 @@
 //  Created by Furkan Hanci on 5/31/21.
 //
 
-
 import SwiftUI
-
-class GetData : ObservableObject  , DataService {
+import CoreData
+class GetData : ObservableObject  , DataService , CoreDataService {
+   
     @Published private var deals : [Deal] = []
+    
+//    func saveData(with context: NSManagedObjectContext) {
+//        deals.forEach { data in
+//            // save entities to CoreData
+//            let entity = Infos(context: context)
+//            entity.dealRating = data.dealRating
+//            entity.normalPrice = data.normalPrice
+//            entity.salePrice = data.salePrice
+//            entity.title = data.title
+//        }
+//    }
+    
     private var second : Int = 0
     internal func getData(price: Int?,completion: @escaping ([Deal]) -> Void) {
         guard let url = URL(string: "https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=\(price ?? 20)")  else {
