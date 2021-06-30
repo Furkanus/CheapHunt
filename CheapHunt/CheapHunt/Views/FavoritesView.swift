@@ -16,15 +16,14 @@ struct FavoritesView: View {
         ZStack {
             
             Text("Just Empty Space :/")
-            
             getSinWave(interval: universalSize.width, amplitude: 200, baseline: -50 + universalSize.height/2)
                 .foregroundColor(Color.init(red: 0.3, green: 0.6, blue: 1).opacity(0.4))
-                .offset(x: isAnimated ? -1*universalSize.width : 0)
+                .offset(x: isAnimated ? -1 * universalSize.width : 0)
             .animation(
                 Animation.linear(duration: 2)
                 .repeatForever(autoreverses: false)
             )
-            getSinWave(interval: universalSize.width*1.2, amplitude: 150, baseline: 50 + universalSize.height/2)
+            getSinWave(interval: universalSize.width * 1.2, amplitude: 150, baseline: 50 + universalSize.height/2)
                 .foregroundColor(Color.init(red: 0.3, green: 0.6, blue: 1).opacity(0.4))
                 .offset(x: isAnimated ? -1*(universalSize.width*1.2) : 0)
             .animation(
