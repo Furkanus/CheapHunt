@@ -33,9 +33,6 @@ struct GameDetailView: View  {
 
                
                 VStack {
-                    
-                   
-                    
                     Image(systemName: "person").getData(url: URL(string : games.thumb!)!)
                         .resizable()
                         .scaledToFit()
