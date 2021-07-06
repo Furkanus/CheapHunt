@@ -32,7 +32,6 @@ struct MainView: View {
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack {
-                    
                     TextField(Constants.Texts.enterAmount, text: $isString)
                         .textFieldStyle(OvalTextField())
                         

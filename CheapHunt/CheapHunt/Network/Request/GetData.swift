@@ -10,6 +10,7 @@ import CoreData
 final class GetData : ObservableObject  , DataService {
    
     @Published private var deals : [Deal] = []
+    static let shared = GetData()
     
 //    func saveData(with context: NSManagedObjectContext) {
 //        deals.forEach { data in
@@ -29,7 +30,7 @@ final class GetData : ObservableObject  , DataService {
         
         
         let session = URLSession(configuration: .default)
-        session.dataTask(with: url) { data, response, error in
+        session.dataTask(with: url) {[weak self] data, response, error in
             
             
            let resp = response as! HTTPURLResponse
@@ -52,9 +53,9 @@ final class GetData : ObservableObject  , DataService {
 
                 var  timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { tim in
 
-                    self.second += 1
+                    self?.second += 1
 
-                  if self.second == 3 {
+                  if self?.second == 3 {
                         tim.invalidate()
                         session.invalidateAndCancel()
                         print("done")
