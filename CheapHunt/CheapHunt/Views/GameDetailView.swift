@@ -21,8 +21,18 @@ struct GameDetailView: View  {
                     Section(header: Text("Game Infos").font(.system(size: 20)).foregroundColor(.white)) {
                         Text("Name: \(games.title!)")
                         Text("Saled Price: \(games.salePrice!)")
-                        Text("Normal Price: \(games.normalPrice!)")
-                        Text("Rating: \(games.dealRating!)")
+                        HStack {
+                            Text("Normal Price: \(games.normalPrice!)")
+                            Image(systemName: "dollarsign.circle.fill")
+                                .foregroundColor(.green)
+
+                        }
+                        HStack {
+                            Text("Rating: \(games.dealRating!)")
+                            Image(systemName: "star.fill")
+                                .foregroundColor(Color.yellow)
+
+                        }
                     }
                 
 

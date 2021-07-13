@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Deal: Codable , Identifiable , Hashable {
+struct Deal: Codable , Identifiable  {
     let id = UUID()
     var title: String?
     var salePrice: String?
