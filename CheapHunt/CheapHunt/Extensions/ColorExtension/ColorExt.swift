@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 extension Color {
     static let bg1 = Color(red: 41 / 250, green: 135 / 250, blue: 188 / 250)
     static let bg2 = Color(red: 47 / 250, green: 73 / 250, blue: 110 / 250)
