@@ -17,6 +17,6 @@ struct MainWidget : Widget {
         
         .description(Text("Cheap Hunt"))
         .configurationDisplayName(Text("Cheap Hunt"))
-        .supportedFamilies([.systemLarge , .systemMedium])
+        .supportedFamilies([.systemLarge])
     }
 }

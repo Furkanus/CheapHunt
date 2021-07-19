@@ -7,7 +7,7 @@
 
 import WidgetKit
 import SwiftUI
-import Intents
+
 
 
 struct WidgetModel : TimelineEntry {
@@ -21,17 +21,34 @@ struct WidgetView : View {
     internal let data : WidgetModel
     
     var body: some View {
-        VStack(spacing : 15) {
-            Text("CheapHunt")
-                .font(.system(size: 20))
-           
-            ForEach(data.widgetData , id: \.self) { game in
-                VStack {
-                    Text(game.title!)
+        ZStack {
+            LinearGradient(gradient: Gradient(colors: [Color.bg1 , Color.bg2]), startPoint: .bottom, endPoint: .top)
+                .edgesIgnoringSafeArea(.all)
+            ZStack {
+                VStack(spacing : 17) {
+                    ForEach(data.widgetData , id: \.self) { game in
+                        VStack {
+                            HStack {
+                                
+                                Text(game.title!)
+                                    .font(.system(size: 17))
+                                
+                                
+                                Text("Price \(game.salePrice!)")
+                                    .font(.system(size: 15))
+                                
+                                Spacer()
+                            }
+                            
+                        }
+                    }
+                    
+                    
+                    
                 }
             }
-            
         }
+        
     }
     
 }
@@ -39,10 +56,10 @@ struct WidgetView : View {
 struct Provider : TimelineProvider {
     func placeholder(in context: Context) -> WidgetModel {
         let loadingData = WidgetModel(date: Date(), widgetData: Array(repeating: GameModel(title: "", salePrice: "", normalPrice: "", thumb: "", dealRating: ""), count: 6))
-       return loadingData
+        return loadingData
     }
     
-
+    
     func getSnapshot(in context: Context, completion: @escaping (WidgetModel) -> Void) {
         let loadingData = WidgetModel(date: Date(), widgetData: Array(repeating: GameModel(title: "", salePrice: "", normalPrice: "", thumb: "", dealRating: ""), count: 6))
         

@@ -31,6 +31,7 @@
 		70B7B37726A5A5D4008184DC /* WidgetServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B7B37626A5A5D4008184DC /* WidgetServiceProtocol.swift */; };
 		70B7B37A26A5A637008184DC /* GetWidgetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B7B37926A5A637008184DC /* GetWidgetData.swift */; };
 		70B7B37E26A5AC20008184DC /* MainWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B7B37D26A5AC20008184DC /* MainWidget.swift */; };
+		70B7B38126A5B27F008184DC /* WidgetColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B7B38026A5B27F008184DC /* WidgetColor+Ext.swift */; };
 		70B92020266A1D550046BD6E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B9201F266A1D550046BD6E /* SettingsView.swift */; };
 		70FFCD8C26640A3E00F85137 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FFCD8B26640A3E00F85137 /* CustomTextField.swift */; };
 		70FFCD8F26640B8800F85137 /* UserName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FFCD8E26640B8800F85137 /* UserName.swift */; };
@@ -94,6 +95,7 @@
 		70B7B37626A5A5D4008184DC /* WidgetServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetServiceProtocol.swift; sourceTree = "<group>"; };
 		70B7B37926A5A637008184DC /* GetWidgetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWidgetData.swift; sourceTree = "<group>"; };
 		70B7B37D26A5AC20008184DC /* MainWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWidget.swift; sourceTree = "<group>"; };
+		70B7B38026A5B27F008184DC /* WidgetColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WidgetColor+Ext.swift"; sourceTree = "<group>"; };
 		70B9201F266A1D550046BD6E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		70FFCD8B26640A3E00F85137 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		70FFCD8E26640B8800F85137 /* UserName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserName.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 		70B7B36426A5A1D0008184DC /* Cheap */ = {
 			isa = PBXGroup;
 			children = (
+				70B7B37F26A5B26E008184DC /* Extensions */,
 				70B7B37C26A5AC04008184DC /* MainWidget */,
 				70B7B37B26A5A838008184DC /* Model */,
 				70B7B37826A5A62A008184DC /* Service */,
@@ -296,6 +299,14 @@
 				70B7B37D26A5AC20008184DC /* MainWidget.swift */,
 			);
 			path = MainWidget;
+			sourceTree = "<group>";
+		};
+		70B7B37F26A5B26E008184DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				70B7B38026A5B27F008184DC /* WidgetColor+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		70FFCD8A266409C200F85137 /* CustomElements */ = {
@@ -475,6 +486,7 @@
 				70B7B36626A5A1D0008184DC /* Cheap.swift in Sources */,
 				70B7B37226A5A398008184DC /* GameModel.swift in Sources */,
 				70B7B37726A5A5D4008184DC /* WidgetServiceProtocol.swift in Sources */,
+				70B7B38126A5B27F008184DC /* WidgetColor+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
