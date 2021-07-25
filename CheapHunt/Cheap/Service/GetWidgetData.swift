@@ -13,6 +13,9 @@ final class GetWidgetData : WidgetServiceProtocol {
     
     static let shared = GetWidgetData()
     
+    @Published private var games : [GameModel] = []
+
+    
     private init() { }
     
     

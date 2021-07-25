@@ -33,6 +33,7 @@
 		70B7B37E26A5AC20008184DC /* MainWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B7B37D26A5AC20008184DC /* MainWidget.swift */; };
 		70B7B38126A5B27F008184DC /* WidgetColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B7B38026A5B27F008184DC /* WidgetColor+Ext.swift */; };
 		70B92020266A1D550046BD6E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B9201F266A1D550046BD6E /* SettingsView.swift */; };
+		70F43FD026AAD0AB00EF2750 /* Image+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F43FCF26AAD0AB00EF2750 /* Image+Ext.swift */; };
 		70FFCD8C26640A3E00F85137 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FFCD8B26640A3E00F85137 /* CustomTextField.swift */; };
 		70FFCD8F26640B8800F85137 /* UserName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FFCD8E26640B8800F85137 /* UserName.swift */; };
 		70FFCD9126640EBD00F85137 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FFCD9026640EBD00F85137 /* CustomButton.swift */; };
@@ -97,6 +98,7 @@
 		70B7B37D26A5AC20008184DC /* MainWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWidget.swift; sourceTree = "<group>"; };
 		70B7B38026A5B27F008184DC /* WidgetColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WidgetColor+Ext.swift"; sourceTree = "<group>"; };
 		70B9201F266A1D550046BD6E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		70F43FCF26AAD0AB00EF2750 /* Image+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Ext.swift"; sourceTree = "<group>"; };
 		70FFCD8B26640A3E00F85137 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		70FFCD8E26640B8800F85137 /* UserName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserName.swift; sourceTree = "<group>"; };
 		70FFCD9026640EBD00F85137 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				70B7B38026A5B27F008184DC /* WidgetColor+Ext.swift */,
+				70F43FCF26AAD0AB00EF2750 /* Image+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				70B7B37A26A5A637008184DC /* GetWidgetData.swift in Sources */,
 				70B7B36626A5A1D0008184DC /* Cheap.swift in Sources */,
 				70B7B37226A5A398008184DC /* GameModel.swift in Sources */,
+				70F43FD026AAD0AB00EF2750 /* Image+Ext.swift in Sources */,
 				70B7B37726A5A5D4008184DC /* WidgetServiceProtocol.swift in Sources */,
 				70B7B38126A5B27F008184DC /* WidgetColor+Ext.swift in Sources */,
 			);

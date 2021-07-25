@@ -38,6 +38,8 @@ struct WidgetView : View {
                                     .font(.system(size: 15))
                                 
                                 Spacer()
+                                
+                                
                             }
                             
                         }
@@ -71,7 +73,7 @@ struct Provider : TimelineProvider {
             let date = Date()
             let data = WidgetModel(date: date, widgetData: modelData)
             
-            let update = Calendar.current.date(byAdding: .minute, value: 10  , to:  date)
+            let update = Calendar.current.date(byAdding: .minute, value: 15  , to:  date)
             
             let timeline = Timeline(entries: [data], policy: .after(update!))
             
