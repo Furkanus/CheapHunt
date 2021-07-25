@@ -54,9 +54,9 @@ struct SettingsView: View {
         
         
         // if you want hourly notification do it like this
-        //         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
+                 let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
 
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+       // let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         
         let request = UNNotificationRequest(identifier: "req", content: content, trigger: trigger)
         
