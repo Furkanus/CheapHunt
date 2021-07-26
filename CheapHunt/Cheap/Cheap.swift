@@ -19,7 +19,7 @@ struct WidgetModel : TimelineEntry {
 
 struct WidgetView : View {
     internal let data : WidgetModel
-    
+    @State private var isWorking : Bool = false
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color.bg1 , Color.bg2]), startPoint: .bottom, endPoint: .top)
@@ -45,8 +45,17 @@ struct WidgetView : View {
                         }
                     }
                     
+                    ProgressView()
+                        .opacity(isWorking ? 1 : 0)
                     
-                    
+                }
+            }.onAppear {
+                switch data.widgetData.isEmpty {
+                case.BooleanLiteralType(true):
+                    self.isWorking = true
+                    print("empty")
+                default:
+                    break;
                 }
             }
         }
