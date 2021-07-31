@@ -12,7 +12,7 @@ import SwiftUI
 
 struct WidgetModel : TimelineEntry {
     
-    var date: Date
+     var date: Date
     var widgetData : [GameModel]
 }
 
@@ -25,6 +25,9 @@ struct WidgetView : View {
             LinearGradient(gradient: Gradient(colors: [Color.bg1 , Color.bg2]), startPoint: .bottom, endPoint: .top)
                 .edgesIgnoringSafeArea(.all)
             ZStack {
+                Text("Some of Games Today!")
+                    .font(.body)
+                    .foregroundColor(.blue)
                 VStack(spacing : 17) {
                     ForEach(data.widgetData , id: \.self) { game in
                         VStack {
@@ -45,17 +48,7 @@ struct WidgetView : View {
                         }
                     }
                     
-                    ProgressView()
-                        .opacity(isWorking ? 1 : 0)
                     
-                }
-            }.onAppear {
-                switch data.widgetData.isEmpty {
-                case.BooleanLiteralType(true):
-                    self.isWorking = true
-                    print("empty")
-                default:
-                    break;
                 }
             }
         }

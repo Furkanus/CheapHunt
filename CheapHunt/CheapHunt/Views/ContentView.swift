@@ -20,6 +20,7 @@ struct ContentView: View {
                 LinearGradient(gradient: Gradient(colors: [Color.bg4, Color.bg3 , Color.bg2 , Color.bg1]), startPoint: .topLeading, endPoint: .bottomTrailing)
                     .edgesIgnoringSafeArea(.all)
                 ZStack {
+                    
                     VStack {
                         Text(Constants.Texts.welcome)
                             .font(.system(size: 50))
