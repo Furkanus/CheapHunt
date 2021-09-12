@@ -17,11 +17,11 @@ struct MainView: View {
     @State private var settingsActive : Bool = false
     @State private var emptyAlert : Bool = false
     @StateObject private var getData = GetData()
+    
     init() {
         UITableView.appearance().backgroundColor = .clear
         UITableView.appearance().separatorStyle = .none
         UITableViewCell.appearance().backgroundColor = .clear
-        
     }
     
     var body: some View {

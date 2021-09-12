@@ -19,8 +19,9 @@ final class GetWidgetData : WidgetServiceProtocol {
     private init() { }
     
     
-    func getWidgetData(completion: @escaping ([GameModel]) -> Void) {
-        guard let url = URL(string: "https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=20") else {
+    func getWidgetData(price : Int? , completion: @escaping ([GameModel]) -> Void) {
+        // We are set default price as a 20 dollars / euro etc...
+        guard let url = URL(string: "https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=\(price ?? 20)") else {
             return
         }
         

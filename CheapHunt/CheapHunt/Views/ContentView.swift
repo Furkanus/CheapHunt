@@ -52,6 +52,7 @@ struct ContentView: View {
                             self.linkActive = true
                             self.userLogged.launch += 1
                         }
+                        
                     }
                         
                         .background(
@@ -83,6 +84,8 @@ struct ContentView: View {
                 default:
                     break;
                 }
+                
+                
             }  .alert(isPresented: $alert , content: {
                 return Alert(title: Text(Constants.Error.checkConnection), message: Text(Constants.Error.oops), dismissButton: .default(Text(Constants.Error.ok)))
             })

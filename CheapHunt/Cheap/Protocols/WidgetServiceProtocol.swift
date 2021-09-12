@@ -9,5 +9,5 @@ import Foundation
 
 
 protocol WidgetServiceProtocol {
-    func getWidgetData(completion : @escaping ([GameModel]) -> Void)
+    func getWidgetData(price : Int? , completion : @escaping ([GameModel]) -> Void)
 }

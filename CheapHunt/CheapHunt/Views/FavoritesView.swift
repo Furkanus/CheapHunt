@@ -10,7 +10,7 @@ import SwiftUI
 struct FavoritesView: View {
     private let universalSize = UIScreen.main.bounds
     
-    @State private  var isAnimated = false
+    @State private  var isAnimated : Bool = false
     var body: some View {
         
         ZStack {
@@ -37,7 +37,7 @@ struct FavoritesView: View {
     }
     
     func getSinWave(interval:CGFloat, amplitude: CGFloat = 100 ,baseline:CGFloat = UIScreen.main.bounds.height/2) -> Path {
-        Path{path in
+        Path { path in
             path.move(to: CGPoint(x: 0, y: baseline
             ))
             path.addCurve(

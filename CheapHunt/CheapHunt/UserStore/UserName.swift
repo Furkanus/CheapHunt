@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import UIKit
 
 class UserName : ObservableObject {
     @Published var name : String {
@@ -18,6 +19,15 @@ class UserName : ObservableObject {
     init() {
         self.name = UserDefaults.standard.object(forKey: "UserName") as? String ?? ""
     }
+    
+    // I LEARNED ARC LIKE THIS DEINIT!
+    
+    /*
+    deinit {
+        print("The Class has been deinit!")
+    }
+ 
+ */
 }
 
 // UserName store has been saved

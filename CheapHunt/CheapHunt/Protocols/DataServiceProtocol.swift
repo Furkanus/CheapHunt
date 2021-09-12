@@ -8,7 +8,7 @@
 import Foundation
 
 
-protocol DataService {
+protocol DataServiceProtocol {
     
     func getData(price:Int?,completion : @escaping ([Deal]) -> Void)
     

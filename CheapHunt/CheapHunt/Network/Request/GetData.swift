@@ -7,7 +7,7 @@
 
 import SwiftUI
 import CoreData
-final class GetData : ObservableObject  , DataService {
+final class GetData : ObservableObject  , DataServiceProtocol {
    
     @Published private var deals : [Deal] = []
     static let shared = GetData()
@@ -39,9 +39,6 @@ final class GetData : ObservableObject  , DataService {
             case .BooleanLiteralType(true):
                 print("error get data from api!")
                 
-            case .BooleanLiteralType(false):
-                print("passed from api")
-                
             default:
                 break;
             
@@ -64,9 +61,6 @@ final class GetData : ObservableObject  , DataService {
                  completion(datas)
                     print("Loaded!")
                 }
-                
-
-                
             
             }
        

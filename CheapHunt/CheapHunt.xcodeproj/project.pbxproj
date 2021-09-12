@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		700387E42663BF25001E810B /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700387E32663BF25001E810B /* ColorExt.swift */; };
 		70039FE2266D489700268D0D /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70039FE1266D489700268D0D /* DataServiceProtocol.swift */; };
+		701E36ED26EDE2C40037E7DD /* RandomPriceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E36EC26EDE2C40037E7DD /* RandomPriceHelper.swift */; };
 		7021261D266B85A600E7A4C2 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7021261C266B85A600E7A4C2 /* GameDetailView.swift */; };
 		70212620266B892100E7A4C2 /* ImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7021261F266B892100E7A4C2 /* ImageURL.swift */; };
 		7024CAF82689C9B800D02A3B /* CheapError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024CAF72689C9B800D02A3B /* CheapError.swift */; };
@@ -70,6 +71,7 @@
 /* Begin PBXFileReference section */
 		700387E32663BF25001E810B /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
 		70039FE1266D489700268D0D /* DataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceProtocol.swift; sourceTree = "<group>"; };
+		701E36EC26EDE2C40037E7DD /* RandomPriceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPriceHelper.swift; sourceTree = "<group>"; };
 		7021261C266B85A600E7A4C2 /* GameDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailView.swift; sourceTree = "<group>"; };
 		7021261F266B892100E7A4C2 /* ImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURL.swift; sourceTree = "<group>"; };
 		7024CAF72689C9B800D02A3B /* CheapError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheapError.swift; sourceTree = "<group>"; };
@@ -153,6 +155,14 @@
 				70829E43268B37780065487E /* CoreDataServiceProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		701E36EB26EDE2B50037E7DD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				701E36EC26EDE2C40037E7DD /* RandomPriceHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		7021261E266B891300E7A4C2 /* ImageService */ = {
@@ -259,6 +269,7 @@
 		70B7B36426A5A1D0008184DC /* Cheap */ = {
 			isa = PBXGroup;
 			children = (
+				701E36EB26EDE2B50037E7DD /* Helpers */,
 				70B7B37F26A5B26E008184DC /* Extensions */,
 				70B7B37C26A5AC04008184DC /* MainWidget */,
 				70B7B37B26A5A838008184DC /* Model */,
@@ -490,6 +501,7 @@
 				70B7B37226A5A398008184DC /* GameModel.swift in Sources */,
 				70F43FD026AAD0AB00EF2750 /* Image+Ext.swift in Sources */,
 				70B7B37726A5A5D4008184DC /* WidgetServiceProtocol.swift in Sources */,
+				701E36ED26EDE2C40037E7DD /* RandomPriceHelper.swift in Sources */,
 				70B7B38126A5B27F008184DC /* WidgetColor+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
