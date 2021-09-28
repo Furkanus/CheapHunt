@@ -27,7 +27,7 @@ struct WidgetView : View {
             ZStack {
                 Text("Some of Games Today!")
                     .font(.body)
-                    .foregroundColor(.blue)
+                    .foregroundColor(.white)
                 VStack(spacing : 17) {
                     ForEach(data.widgetData , id: \.self) { game in
                         VStack {
