@@ -11,6 +11,7 @@ import UIKit
 
 class UserName : ObservableObject {
     var commit : String
+    var commit2 : String
     @Published var name : String {
         didSet {
             UserDefaults.standard.setValue(self.name, forKey: "UserName")
@@ -20,6 +21,7 @@ class UserName : ObservableObject {
     init() {
         self.name = UserDefaults.standard.object(forKey: "UserName") as? String ?? ""
         self.commit = "Commit I lost my github account 🥲"
+        self.commit2 = "Commit 2"
     }
     
     // I LEARNED ARC LIKE THIS DEINIT!
